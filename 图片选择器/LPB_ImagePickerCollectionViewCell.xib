@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LPB_ImagePickerCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEI-94-UkJ">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="117"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_imagset_seleced" translatesAutoresizingMaskIntoConstraints="NO" id="Vl5-nC-bGA">
+                        <rect key="frame" x="114" y="5" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.2274509804" green="0.64313725489999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OvL-ac-IYo"/>
+                            <constraint firstAttribute="width" constant="30" id="whE-AP-d4s"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Vl5-nC-bGA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="1Qa-dX-c6T"/>
+                <constraint firstAttribute="bottom" secondItem="UEI-94-UkJ" secondAttribute="bottom" id="DRc-uT-Z6y"/>
+                <constraint firstItem="UEI-94-UkJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HVH-Yf-NkS"/>
+                <constraint firstAttribute="trailing" secondItem="UEI-94-UkJ" secondAttribute="trailing" id="Kta-l0-L4g"/>
+                <constraint firstItem="UEI-94-UkJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pMG-oF-sBa"/>
+                <constraint firstAttribute="trailing" secondItem="Vl5-nC-bGA" secondAttribute="trailing" constant="5" id="tAs-XN-Mqx"/>
+            </constraints>
+            <size key="customSize" width="149" height="117"/>
+            <connections>
+                <outlet property="headerImage" destination="UEI-94-UkJ" id="OwJ-fB-rgv"/>
+                <outlet property="selectedImage" destination="Vl5-nC-bGA" id="Jez-NR-5E8"/>
+            </connections>
+            <point key="canvasLocation" x="83.5" y="87.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_imagset_seleced" width="16" height="16"/>
+    </resources>
+</document>
